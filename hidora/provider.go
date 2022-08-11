@@ -48,33 +48,33 @@ func Provider() *schema.Provider {
 	return &schema.Provider{
 		Schema: map[string]*schema.Schema{
 			"host": {
-				Type:     schema.TypeString,
-				Optional: true,
-				//DefaultFunc: schema.EnvDefaultFunc("JELASTIC_HOST", nil),
+				Type:        schema.TypeString,
+				Optional:    true,
+				DefaultFunc: schema.EnvDefaultFunc("HIDORA_HOST", nil),
 			},
 			"username": {
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("JELASTIC_USERNAME", nil),
+				DefaultFunc: schema.EnvDefaultFunc("HIDORA_USERNAME", nil),
 			},
 			"password": {
 				Type:        schema.TypeString,
 				Optional:    true,
 				Sensitive:   true,
-				DefaultFunc: schema.EnvDefaultFunc("JELASTIC_PASSWORD", nil),
+				DefaultFunc: schema.EnvDefaultFunc("HIDORA_PASSWORD", nil),
 			},
 			"access_token": {
 				Type:        schema.TypeString,
 				Optional:    true,
 				Sensitive:   true,
-				DefaultFunc: schema.EnvDefaultFunc("JELASTIC_TOKEN", nil),
+				DefaultFunc: schema.EnvDefaultFunc("HIDORA_TOKEN", nil),
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"jelastic_create_env": resourceJelasticCreateEnvironment(),
+			"hidora_create_env": resourceHidoraCreateEnvironment(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
-			"jelastic_create_env": dataSourceJelasticCreateEnvironment(),
+			"hidora_create_env": dataSourceHidoraCreateEnvironment(),
 		},
 		ConfigureContextFunc: providerConfigure,
 	}

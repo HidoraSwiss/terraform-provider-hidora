@@ -13,7 +13,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
-func dataSourceJelasticCreateEnvironment() *schema.Resource {
+func dataSourceHidoraCreateEnvironment() *schema.Resource {
 	return &schema.Resource{
 		ReadContext: dataSourceJelasticCreateEnvironmentRead,
 		Schema: map[string]*schema.Schema{

@@ -83,7 +83,7 @@ const (
 	SHORTDOMAIN_MAX_LENGTH                  int    = 41 // Not be so sure
 )
 
-func resourceJelasticCreateEnvironment() *schema.Resource {
+func resourceHidoraCreateEnvironment() *schema.Resource {
 	return &schema.Resource{
 		CreateContext: resourceJelasticCreateEnvironmentCreate,
 		ReadContext:   resourceJelasticCreateEnvironmentRead,
