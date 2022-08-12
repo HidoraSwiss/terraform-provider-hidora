@@ -8,7 +8,7 @@ terraform {
 
 provider "hidora" {
     host = "app.hidora.com"
-    access_token = "1a7904b00e4c4b719d8f2956e1287dda075503cf"
+    access_token = ""
 }
 
 data "hidora_create_env" "test-data" {
